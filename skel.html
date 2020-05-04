@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 24px;
+        }
+
+        main div {
+            border: 2px dashed #EEE;
+        }
+
+        .skel main div {
+            position: relative;
+        }
+
+        .skel main div span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            z-index: 100;
+        }
+    </style>
+
+</head>
+
+<body class="skel">
+    <h1>Skel Demo</h1>
+    <main>
+        <div><span></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nulla ut augue egestas pretium. Nunc
+                vehicula vestibulum mi eu volutpat. Sed faucibus maximus orci, ac volutpat leo tristique consequat. Sed
+                lobortis sapien quis augue suscipit feugiat. Praesent dapibus vel metus in mattis. Nulla enim mi,
+                malesuada eget scelerisque sit amet, tempor dapibus quam. Donec id velit ut nulla lobortis pretium.
+                Nullam tellus ex, interdum vitae rutrum a, condimentum in nibh. Aenean fermentum vulputate commodo.
+                Mauris aliquam vulputate libero facilisis gravida. Fusce malesuada feugiat egestas. Praesent dapibus
+                orci nec efficitur facilisis. Donec vulputate ligula diam. Vestibulum congue ex massa, quis suscipit
+                enim condimentum non. Curabitur lobortis dignissim dui, ut pretium risus posuere at. In hac habitasse
+                platea dictumst.</p>
+        </div>
+        <div><span></span>
+            <p>Fusce egestas dui sed lorem tincidunt feugiat. Nulla rhoncus quam a risus consectetur, sit
+                amet auctor enim pharetra. Donec gravida nisi neque, at mattis velit dignissim sit amet. Proin eleifend
+                augue sed elit ullamcorper bibendum. Ut a molestie ipsum. Ut posuere tincidunt lectus, sed pretium orci
+                bibendum vitae. Suspendisse potenti. Suspendisse rutrum congue sodales. Ut cursus condimentum sem, quis
+                viverra nunc porta vitae. Curabitur mattis erat et metus semper suscipit.</p>
+        </div>
+        <div><span></span>
+            <p>Ut pharetra tristique semper. Sed tempor, nisi et posuere porta, purus turpis consectetur
+                elit, sed auctor nibh nisl eu lorem. Nam rutrum ipsum orci, eget rhoncus dui lobortis vel. Mauris
+                faucibus,
+                est at eleifend vulputate, quam massa auctor sapien, eu faucibus arcu magna condimentum dui. Donec
+                porttitor
+                turpis nec nunc malesuada, id convallis est tincidunt. Proin rutrum, risus sed sodales porta, purus elit
+                pulvinar urna, in faucibus nibh lorem non ipsum. Etiam a sapien sed turpis blandit auctor. Nunc cursus
+                luctus vulputate. Suspendisse suscipit magna ac nulla consequat, eu dapibus dolor semper. Ut consequat
+                mauris vitae purus euismod tincidunt. Morbi justo sapien, rhoncus ac iaculis eu, finibus eget eros.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc lacus
+                turpis,
+                euismod non tristique eget, rutrum ullamcorper mi. Proin ut tincidunt lectus.</p>
+        </div>
+    </main>
+    <button onclick="removeSkelClass()">Remove Skel</button>
+    <script>
+        function removeSkelClass() {
+            var el = document.querySelector("body");
+            el.classList.remove("skel");
+        }
+    </script>
+</body>
+
+</html>
